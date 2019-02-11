@@ -1,0 +1,40 @@
+<html>
+    <head>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Hei Bussi!</h1>
+
+        <div class="content">
+			
+			<h2>L&auml;het&auml; viesti</h2>
+            <form id="send-message-form">
+				<input type="text" name="text" placeholder="Viesti"></input>
+				<input type="text" name="nickname" placeholder="Nimimerkki"></input>
+				<button>L&auml;het&auml;</button>
+			
+			</form>
+
+        </div>	
+	
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyDNVB4uBHODt3C5NeLiw-hUVL8iihlnszY",
+		authDomain: "heibussi-438c2.firebaseapp.com",
+		databaseURL: "https://heibussi-438c2.firebaseio.com",
+		projectId: "heibussi-438c2",
+		storageBucket: "heibussi-438c2.appspot.com",
+		messagingSenderId: "970459517044"
+	  };
+	  firebase.initializeApp(config);	  
+	  const db = firebase.firestore();
+	  db.settings({ timestampsInSnapshots: true });
+	</script>	
+
+    <script src="sendMessage.js"></script>
+    </body>
+</html>
